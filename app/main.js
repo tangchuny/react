@@ -1,4 +1,9 @@
 let React = require('react');
 let ReactDOM = require('react-dom');
-let AppComponent = require('./components/productBox.js');
-ReactDOM.render(<AppComponent />, document.getElementById('content'));
+
+let TodoApp = require('./components/TodoApp.react');
+
+ReactDOM.render(
+	< TodoApp / > , 
+	document.getElementById('content')
+);

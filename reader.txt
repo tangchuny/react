@@ -1,0 +1,8 @@
+初始化项目：
+npm install
+
+安装包命令：
+npm install webpack --save-dev
+
+启动命令：
+npm run dev
