@@ -1,0 +1,90 @@
+ .footer {
+    box-sizing: border-box
+}
+
+.footer {
+    position: relative;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    background: #3A424A;
+    width: 100%;
+    min-width: 320px;
+    height: 4.5rem
+}
+
+.footer .menus {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    width: 100%
+}
+
+.footer .menus .menu {
+    font-size: 1rem;
+    float: left;
+    width: 25%;
+    height: 4.5rem;
+    text-align: center;
+    padding: .4rem 0 0 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    -webkit-tap-highlight-color: transparent
+}
+
+.footer .menus .menu a {
+    display: block;
+    color: #ffffff
+}
+
+.footer .menus .menu a .menu-icon1 {
+    background: url(./img/ic_dh_sy.png) center center no-repeat scroll
+}
+
+.footer .menus .menu a .menu-icon2 {
+    background: url(./img/ic_dh_xd.png) center center no-repeat scroll
+}
+
+.footer .menus .menu a .menu-icon3 {
+    background: url(./img/ic_dh_shop.png) center center no-repeat scroll
+}
+
+.footer .menus .menu a .menu-icon4 {
+    background: url(./img/ic_dh_me.png) center center no-repeat scroll
+}
+
+.footer .menus .menu a .menu-icon {
+    display: block;
+    width: 100%;
+    height: 2.1rem;
+    margin-bottom: .4rem;
+    background-size: 20px 20px
+}
+
+.footer .menus .menu.active {
+    background-color: #E13F3F
+}
+
+.footer .menus .menu.gwc {
+    position: relative
+}
+
+.footer .menus .menu.gwc .count {
+    font-family: Arial, 'microsoft yahei', Helvetica, sans-serif;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 55%;
+    padding: 0 .5em;
+    height: 16px;
+    line-height: 16px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #E13F3F;
+    border-radius: 50%
+}
+
+.footer .menus .menu.active .count {
+    color: #E13F3F;
+    background-color: #fff
+}

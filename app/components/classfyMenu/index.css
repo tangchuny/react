@@ -1,0 +1,66 @@
+.link-cate {
+    padding-bottom: 1px
+}
+
+.link-cate a {
+    display: block
+}
+
+.link-cate {
+    background-color: #fff;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0.7rem
+}
+
+.link-cate .cate1 {
+    background-image: url(./img/ic_sy_lsxc.png)
+}
+
+.link-cate .cate2 {
+    background-image: url(./img/ic_sy_xxsg.png)
+}
+
+.link-cate .cate3 {
+    background-image: url(./img/ic_sy_jsyl.png)
+}
+
+.link-cate .cate4 {
+    background-image: url(./img/ic_sy_sxsp.png)
+}
+
+.link-cate .cate5 {
+    background-image: url(./img/pic_gg_mrr.png)
+}
+
+.link .link-cate .cate6 {
+    background-image: url(./img/pic_gg_mrr.png)
+}
+
+.link-cate .cate7 {
+    background-image: url(./img/pic_gg_mrr.png)
+}
+
+.link-cate .cate8 {
+    background-image: url(./img/pic_gg_mrr.png)
+}
+
+.link-cate .cate {
+    display: block;
+    width: 25%;
+    float: left;
+    padding: 5.6rem 0 0 0;
+    background-position: 50% 1rem;
+    background-repeat: no-repeat;
+    background-size: auto 4rem;
+    color: #666666;
+    font-size: 1.1rem;
+    text-align: center
+}
+
+.link-cate:after {
+    content: '';
+    display: table;
+    height: 0;
+    clear: both
+}

@@ -1,0 +1,114 @@
+.search {
+    padding: 0.5rem 1.6rem 0.5rem 1.6rem;
+    background-color: #EBEBEB;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 4rem;
+}
+
+.search .search-input, .search input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 3rem;
+    padding: 0 3.6rem 0 28px;
+    background: url(./img//ic_sy_search.png) 8px center no-repeat scroll #fff;
+    background-size: 14px 14px;
+    border: 1px solid #CCCCCC;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.4rem
+}
+
+.search .clear {
+    position: absolute;
+    right: 5.6rem;
+    top: 0;
+    height: 100%;
+    width: 4rem;
+    /*background: url(../img/v2.0/btn_search_delete.png) 50% 50% no-repeat;*/
+    background-size: 2.9rem auto;
+    display: none
+}
+
+.search .cancel {
+    display: block;
+    height: 100%;
+    line-height: 3rem;
+    width: 0;
+    text-align: right;
+    font-size: 1.4rem;
+    color: #1496E7;
+    -webkit-transition: width .3s;
+    transition: width .3s;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.search .cancel.show {
+    width: 4rem
+}
+
+.search .cancel.show:before {
+    content: '取消'
+}
+
+.search.fixed {
+    background-color: #EBEBEB;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    z-index: 2;
+    padding: 0.5rem 5rem 0.5rem 1.6rem
+}
+
+.search.fixed .search-input {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease
+}
+
+.search.fixed .shop-detail {
+    display: block;
+    height: 3rem;
+    line-height: 3rem;
+    color: #666666;
+    font-size: 1.2rem;
+    padding-left: 3rem;
+   /* background: url(../img/v2.0/ic_sy_dp.png) 1rem center no-repeat scroll;*/
+    background-size: 14px 14px
+}
+
+.search.fixed .shop-code {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    height: 4rem;
+    width: 5rem;
+   /* background: url(../img/v2.0/ic_dpsy_ewm.png) center center no-repeat;*/
+    background-size: 2rem 2rem
+}
+
+.search-result {
+    box-sizing: border-box;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    color: #666;
+    background-color: #fff
+}
+
+.search-result .search-result-txt {
+    font-size: 1.2rem;
+    color: #333;
+    padding: 0.7rem 1.6rem 0 1.6rem
+}
+
+.search-result .addToCaret {
+    bottom: .6rem
+}

@@ -1,9 +1,19 @@
-let React = require('react');
-let ReactDOM = require('react-dom');
+//https://github.com/jackielii/simplest-redux-example/blob/master/index.js
+import React, { Component, PropTypes } from 'react'
+import ReactDOM from 'react-dom'
+import { createStore } from 'redux'
+import { Provider, connect } from 'react-redux'
+import App from './containers/App'
+import configureStore from './stores/configureStore'
+import MainComponents from './containers/MainComponents'
 
-let TodoApp = require('./components/TodoApp.react');
+//import MainComponents from './components/demo/Father'
+
+const store = configureStore()
 
 ReactDOM.render(
-	< TodoApp / > , 
-	document.getElementById('content')
-);
+  <Provider store={store}>
+    <MainComponents />
+  </Provider>,
+  document.getElementById('root')
+)
