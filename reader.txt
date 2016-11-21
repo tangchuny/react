@@ -6,3 +6,12 @@ npm install webpack --save-dev
 
 启动命令：
 npm run dev
+
+
+1）获取属性的值用的是this.props.属性名
+
+2）创建的组件名称首字母必须大写。
+
+3）为元素添加css的class时，要用className。
+
+4）组件的style属性的设置方式也值得注意，要写成style={{width: this.state.witdh}}。

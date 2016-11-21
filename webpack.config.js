@@ -3,6 +3,7 @@ var path = require('path');
 var webpack = require('webpack');
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
 	entry: ['webpack/hot/dev-server', path.resolve(__dirname, './app/main.js')],
@@ -27,15 +28,24 @@ var config = {
 			loader: "coffee-loader"
 		}, {
 			test: /\.css$/,
-			loader: 'style!css'
+			//loader: 'style!css'
+			loader: 'style!css!autoprefixer?{browsers:["last 2 version", "> 1%"]}',
+
 		}, {
 			test: /\.less$/,
 			loader: 'style!css!less'
 		}, 
-		
+		{
+	      test: /\.json$/,
+	      loader: [ 'json' ],
+	      include: __dirname
+	   },
      	{
-			test: /\.(png|jpg)$/,
-			loader: 'url?limit=25000'
+			test: /\.(png|jpg|gif)$/,
+			//loader: 'url-loader?limit=8192'
+			// name 字段指定了在打包根目录（output.path）下生成名为 images 的文件夹，并在原图片名前加上8位 hash 值。
+			//loader: 'file-loader?name=img/[hash:8].[name].[ext]' 
+			loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'
 		},
      	{ 
      		test: /\.jsx$/, 
@@ -45,6 +55,9 @@ var config = {
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
+		new ExtractTextPlugin("style.css", {
+            allChunks: true
+        })
 		//new CommonsChunkPlugin('init.js'),
     	//new OpenBrowserPlugin({ url: 'http://localhost:8080' })
 	]
